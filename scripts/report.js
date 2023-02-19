@@ -23,6 +23,7 @@ totalScore.innerText = `TotalScore : ${score()} / ${ques.length}`
     let question = document.createElement('h1')
     question.innerText = el.question;
     let answer = document.createElement('h2')
+ 
     answer.innerText = `Answer: ${el.correctAnswer}` ;
     let userSelected = document.createElement('h3')
     userSelected.innerText = `yourAnswer: ${el.selectedAnswer == "" ? ('You have Skipped'): el.selectedAnswer}`;

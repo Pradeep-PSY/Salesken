@@ -11,8 +11,15 @@
       crossorigin="anonymous"
     />
   </head>
-  <body >
+  <style>
+    *{
+        font-family: 'Jost', sans-serif;
+       
+    }
+    
 
+  </style>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/index.html">Quiz app</a>
@@ -29,41 +36,48 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
           </ul>
-        </div>
 
-        <div class="mx-2">
-          <button
-            class="btn btn-danger"
-            data-bs-toggle="modal"
-            data-bs-target="#logoutModal"
-          >
-            Logout
-          </button>
+          <div class="mx-2">
+            <a href="/index.html">
+              <button
+                class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#logoutModal"
+              >
+                Logout
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container border p-3 m-4">
+    <div class="container border p-3 m-4 bg-secondary">
       <div class="border container">
-        <h1 id="question">Question</h1>
+        <h1 id="question"></h1>
       </div>
 
-      <div class="border container p-3">
-        <h3 class="p-2 border m-2" id="ans1" onclick="onClicked(event)">Answer</h3>
-        <h3 class="p-2 border m-2" id="ans2" onclick="onClicked(event)">Answer</h3>
-        <h3 class="p-2 border m-2" id="ans3" onclick="onClicked(event)">Answer</h3>
-        <h3 class="p-2 border m-2" id="ans4" onclick="onClicked(event)">Answer</h3>
+      <div class="border container p-3 bg-warning">
+        <h3 class="p-2 border m-2" id="ans1" onclick="onClicked(event)">
+          
+        </h3>
+        <h3 class="p-2 border m-2" id="ans2" onclick="onClicked(event)">
+         
+        </h3>
+        <h3 class="p-2 border m-2" id="ans3" onclick="onClicked(event)">
+         
+        </h3>
+        <h3 class="p-2 border m-2" id="ans4" onclick="onClicked(event)">
+         
+        </h3>
       </div>
 
       <div class="m-2">
-        <button class="btn btn-secondary mt-3" id="skip">Skip</button>
+        <button class="btn btn-warning mt-3" id="skip">Skip</button>
       </div>
     </div>
 
