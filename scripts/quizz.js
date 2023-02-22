@@ -49,7 +49,7 @@ skip.addEventListener('click', function (){
 function onClicked (e) {
     // console.log(e.target)
     ques[start].selectedAnswer = e.target.innerText
-    console.log(ques)
+    // console.log(ques)
     let sample = document.getElementById(e.target.id)
     // console.log(sample)
    
