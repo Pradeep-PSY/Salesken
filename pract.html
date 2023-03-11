@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      #grandparent {
+        background-color: green;
+        width: 300px;
+        height: 300px;
+      }
+      #parent {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+      }
+      #child {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <table border="1">
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <table border="1" >
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+ -->
+    <!-- <table border="1">
+    <tr>
+        <td>Cell 1</td>
+        <td>Cell 2
+            <table border="1">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </td> 
+
+        
+       
+
+    </tr>
+ </table>
+
+
+-->
+    <div>
+      
+      <div id="grandparent">
+        GrandParent
+        <div id="parent">
+          Parent
+          <div id="child">Child</div>
+        </div>
+      </div>
+    </div>
+    <ul id="ul">
+      <li id="chai">Chai</li>
+      <li id="samosa">Samosa</li>
+      <li id="jalebi">Jalebi</li>
+      <li id="dhokla">Dhokla</li>
+      <li>Pani puri</li>
+    </ul>
+  </body>
+</html>
+
+<script>
+  let chai = document.getElementById("chai");
+  let samosa = document.getElementById("samosa");
+  let jalebi = document.getElementById("jalebi");
+  let dhokla = document.getElementById("dhokla");
+  let ul = document.getElementById("ul");
+
+    //  chai.addEventListener('click', (e)=>{
+    //   console.log(e.target.innerText)
+    //  })
+    //  samosa.addEventListener('click', (e)=>{
+    //   console.log(e.target.innerText)
+    //  })
+    //  jalebi.addEventListener('click', (e)=>{
+    //   console.log(e.target.innerText)
+    //  })
+    //  dhokla.addEventListener('click', (e)=>{
+    //   console.log(e.target.innerText)
+    //  })
+  ul.addEventListener("click", (e) => {
+    console.log(e.target.innerText);
+  });
+
+  const grandParent = document.getElementById("grandparent");
+  const parent = document.getElementById("parent");
+  const child = document.getElementById("child");
+
+  document.addEventListener(
+    "click",
+    (e) => {
+      console.log("Document capturing");
+    },
+    { capture: true }
+  );
+
+  grandParent.addEventListener(
+    "click",
+    (e) => {
+      console.log("GrandParent capturing");
+    },
+    { capture: true }
+  );
+
+  parent.addEventListener(
+    "click",
+    (e) => {
+      console.log("Parent capturing");
+    },
+    { capture: true }
+  );
+
+  child.addEventListener(
+    "click",
+    (e) => {
+      console.log("Child capturing");
+    },
+    { capture: true }
+  );
+  document.addEventListener(
+    "click",
+    (e) => {
+      console.log("Document bubbling");
+    },
+    { capture: false }
+  );
+
+  grandParent.addEventListener(
+    "click",
+    (e) => {
+      console.log("GrandParent bubbling");
+    },
+    { capture: false }
+  );
+
+  parent.addEventListener(
+    "click",
+    (e) => {
+      console.log("Parent bubbling");
+    },
+    { capture: false }
+  );
+
+  child.addEventListener(
+    "click",
+    (e) => {
+      console.log("Child bubbling");
+    },
+    { capture: false }
+  );
+
+</script>
