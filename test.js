@@ -1,20 +1,53 @@
 
-// function create(){
-//     let a = 'cool'
-//     // console.log(' I am '+ a)
-//     function another(){
-        
-//         console.log(' I am '+ a + 90 *90)
-//     }
-//     a = 'super cool'
-//    return  another
 
-// }
-// let k = create()
-// k()
+function main(){
+    let name = 'Rahul'
 
-//holi today
-//again holiday
+    function printName(){
+        console.log('Name is ', name)
+
+        function third(){
+            console.log(name)
+        }
+        name = 'Rohan'
+        third()
+    }
+    name = 'Mohit'
+    return printName
+}
+
+let cal = main()
+
+cal()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 
 function add(a){
@@ -71,3 +104,31 @@ console.log(person.naam)
 person.nam = 'Arun'
 
 console.log(person.naam)
+
+*/
+
+var xp = 100
+function alpha () {
+    var xp = 200
+    function beta(){
+        console.log(xp)
+    }
+    return beta
+}
+var gamma = alpha()
+gamma()
+
+let fname = 'Masai'
+let lname  = 'School'
+const org = {fname, lname}
+console.log(org)
+
+function getNaam(){
+    let name = 'raul'
+}
+getNaam()
+console.log(name)
+
+// absolute, place an element exactly where you want to place it. absolute position is actually set relative to the element's parent. if no parent available then relatively place to the page itself (it will default all the way back up to the element).
+// relative, means "relative to itself". Setting position: relative; on an element and no other positioning attributes, it will no effect on it's positioning. Any child element will be absolutely positioned within that block.
+// fixed, element is positioned relative to viewport or the browser window itself. viewport doesn't changed if u scroll and hence fixed element will stay right in the same position.
