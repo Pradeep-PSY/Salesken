@@ -124,7 +124,7 @@ const org = {fname, lname}
 console.log(org)
 
 function getNaam(){
-    let name = 'raul'
+     name = 'raul'
 }
 getNaam()
 console.log(name)
@@ -132,3 +132,25 @@ console.log(name)
 // absolute, place an element exactly where you want to place it. absolute position is actually set relative to the element's parent. if no parent available then relatively place to the page itself (it will default all the way back up to the element).
 // relative, means "relative to itself". Setting position: relative; on an element and no other positioning attributes, it will no effect on it's positioning. Any child element will be absolutely positioned within that block.
 // fixed, element is positioned relative to viewport or the browser window itself. viewport doesn't changed if u scroll and hence fixed element will stay right in the same position.
+
+str = 'Nasiak'
+var str
+console.log(str)
+// var {length} = str 
+
+// const isAuth
+// console.log(isAuth)
+
+function see(){
+    var name = 'masi'
+    console.log(this.name, typeof [])
+}
+
+var name = 'masuu'
+see()
+
+var orr = new Array(5).fill(0).map(function(a,b){return b+1})
+console.log(orr)
+
+console.log(typeof [1,1,1] === typeof {val:1,val:1,val:1})
+console.log([1]===[1])
