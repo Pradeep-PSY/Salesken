@@ -154,3 +154,19 @@ console.log(orr)
 
 console.log(typeof [1,1,1] === typeof {val:1,val:1,val:1})
 console.log([1]===[1])
+
+
+const summ = (x, y) =>{
+    x = x && 5
+    y = y || 5
+    return x + y
+}
+
+console.log(summ(5,15))
+
+const check = [10, 12, 15, 21]
+for(var i=0;i<check.length; i++){setTimeout(function(){
+    console.log('Index: '+ i + 'element: '+ check[i])
+},3000)}
+
+console.log(typeof function(){})
